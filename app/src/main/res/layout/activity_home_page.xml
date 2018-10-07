@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/grad_bg"
+    android:orientation="vertical"
+    tools:context=".HomePageActivity">
+
+    <Button
+        android:id="@+id/accSetting"
+        android:layout_width="142dp"
+        android:layout_height="40dp"
+        android:background="@null"
+        android:shadowColor="#07FA81"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="5"
+        android:text="@string/acc_settings"
+        android:textColor="#FFFFFF"
+        android:textSize="20dp"
+        android:textStyle="italic|bold"
+        tools:layout_editor_absoluteX="121dp"
+        tools:layout_editor_absoluteY="511dp" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="175dp"
+        android:layout_height="175dp"
+        android:layout_marginLeft="115dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/logo" />
+
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/enterPressure"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:textStyle="bold|italic"
+        android:typeface="serif"
+        android:visibility="visible" />
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/sysPressure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:hint="@string/systolic"
+            android:inputType="number"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="/"
+            android:textColor="@color/white"
+            android:textSize="70dp"
+            android:textStyle="bold|italic"
+            android:typeface="serif"
+            android:visibility="visible" />
+
+
+        <EditText
+            android:id="@+id/diaPressure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:hint="@string/diastolic"
+            android:inputType="number"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/processData"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginLeft="120dp"
+        android:background="@drawable/btneditor"
+        android:padding="5dp"
+        android:shadowColor="#07FA81"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="5"
+        android:text="@string/process"
+        android:textColor="#FFFFFF"
+        android:textSize="20dp" />
+
+    <ListView
+        android:id="@+id/listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textColor="@color/white"
+        tools:layout_editor_absoluteX="0dp"
+
+        tools:layout_editor_absoluteY="16dp" />
+
+
+
+</LinearLayout>
