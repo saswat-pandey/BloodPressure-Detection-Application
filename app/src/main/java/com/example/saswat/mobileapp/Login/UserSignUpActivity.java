@@ -1,4 +1,4 @@
-package com.example.saswat.mobileapp;
+package com.example.saswat.mobileapp.Login;
 
 import android.content.Intent;
 import android.support.annotation.NonNull;
@@ -13,6 +13,8 @@ import android.widget.ProgressBar;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
+
+import com.example.saswat.mobileapp.R;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;

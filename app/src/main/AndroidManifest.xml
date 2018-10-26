@@ -2,7 +2,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.saswat.mobileapp">
 
-    <uses-permission android:name="android.permission.SEND_SMS"></uses-permission>
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,17 +15,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".Login.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".AccountSettingActivity" />
-        <activity android:name=".PwdResetActivity" />
-        <activity android:name=".UserSignUpActivity" />
-        <activity android:name=".HomePageActivity"></activity>
+        <activity android:name=".Login.AccountSettingActivity" />
+        <activity android:name=".Login.PwdResetActivity" />
+        <activity android:name=".Login.UserSignUpActivity" />
+        <activity android:name=".Login.HomePageActivity" />
+        <activity android:name=".BluetoothConnection.BluetoothConnection"></activity>
     </application>
 
 </manifest>

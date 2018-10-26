@@ -1,4 +1,4 @@
-package com.example.saswat.mobileapp;
+package com.example.saswat.mobileapp.Login;
 
 public class RegisteredUser {
     public String fullname, email, designation,docName,docPhone;

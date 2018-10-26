@@ -1,13 +1,11 @@
-package com.example.saswat.mobileapp;
+package com.example.saswat.mobileapp.Login;
 
 
 import android.Manifest;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.net.Uri;
 import android.os.Bundle;
-import android.provider.ContactsContract;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
@@ -23,6 +21,8 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.example.saswat.mobileapp.BluetoothConnection.BluetoothConnection;
+import com.example.saswat.mobileapp.R;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -42,7 +42,7 @@ public class HomePageActivity extends AppCompatActivity {
     private FirebaseAuth.AuthStateListener mAuthListener;
     private DatabaseReference dbRef;
     private String userID, patientName, docNum;
-    private Button accSettings, dataProcess;
+    private Button accSettings, dataProcess, bluetooth;
     private EditText systolic, daistolic;
     private Integer systolicVal, daistolicVal;
     private ListView mListView;
@@ -63,6 +63,7 @@ public class HomePageActivity extends AppCompatActivity {
         FirebaseUser user = mAuth.getCurrentUser();
         userID = user.getUid();
         accSettings = (Button) findViewById(R.id.accSetting);
+        bluetooth = (Button) findViewById(R.id.bluetooth);
         dataProcess = (Button) findViewById(R.id.processData);
         systolic = (EditText) findViewById(R.id.sysPressure);
         daistolic = (EditText) findViewById(R.id.diaPressure);
@@ -73,6 +74,13 @@ public class HomePageActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(HomePageActivity.this, AccountSettingActivity.class));
+            }
+        });
+
+        bluetooth.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(HomePageActivity.this, BluetoothConnection.class));
             }
         });
 
